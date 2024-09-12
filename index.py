@@ -34,7 +34,7 @@ def main():
     #register UI
     ui.register_command("deposit", user.deposit, "deposit [accountNumber] [amount] - deposit an amount into an account")
     ui.register_command("withdraw", user.withdraw, "withdraw [accountNumber] [amount] - withdraw an amount from an account")
-    ui.register_command("transfer", user.transfer, " transfer [from_account_number] [toAccountNumber] [amount] - transfer an amount from one account to another account")
+    ui.register_command("transfer", user.transfer, " transfer [from_account_number] [to_account_number] [amount] - transfer an amount from one account to another account")
 
     #Main Loop
     while True:
