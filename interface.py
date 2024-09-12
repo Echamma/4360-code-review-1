@@ -10,7 +10,7 @@ class UserInterface:
     def show_commands(self):
         for key,val in self.commands.items():
             message = key + " - " + val["description"]
-            self.message.print(message)
+            self.print(message)
             
 
     def register_command(self, command, callback, description=""):
@@ -27,4 +27,4 @@ class UserInterface:
             func = self.commands[command]["callback"]
             return func(args)
         except:
-            self.message.print("sorry, that is not a valid command")
+            self.print("sorry, that is not a valid command")
