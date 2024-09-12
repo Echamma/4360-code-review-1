@@ -6,7 +6,7 @@ Get Started
 User Interface
     - deposit [amount] [accountNumber] - deposits the amount (float number) into the accountNumber (integer)
     - withdraw [amount] [accountNumber] - withdraws the amount (float number) from the accountNumber (integer)
-    - transfer [amount] [fromAccountNumber] [toAccountNumber] - transfers the amount (float number) from the fromAccountNumber (integer) to the toAccountNumber (integer)
+    - transfer [amount] [from_account_number] [toAccountNumber] - transfers the amount (float number) from the from_account_number (integer) to the toAccountNumber (integer)
 
 
 Requirements
