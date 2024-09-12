@@ -1,8 +1,6 @@
-from message import Message
+
 from exceptions import BankingExcpetion, Invalidaccount_numberException
 
-
-message = Message()
 
 class User:
     def __init__(self, name, accounts):

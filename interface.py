@@ -1,16 +1,15 @@
 
 
-from message import Message
+
 
 class UserInterface:
     def __init__(self):
         self.commands = {}
-        self.message = Message()
 
     def show_commands(self):
         for key,val in self.commands.items():
             message = key + " - " + val["description"]
-            self.print(message)
+            print(message)
             
 
     def register_command(self, command, callback, description=""):
@@ -27,4 +26,4 @@ class UserInterface:
             func = self.commands[command]["callback"]
             return func(args)
         except:
-            self.print("sorry, that is not a valid command")
+            print("sorry, that is not a valid command")

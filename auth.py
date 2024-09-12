@@ -1,9 +1,8 @@
 import json
 from user import User
 from account import Account
-from message import Message
 
-message = Message()
+
 
 class Auth:
     def __init__(self):

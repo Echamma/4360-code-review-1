@@ -1,5 +1,5 @@
 import os
-from message import Message
+
 from interface import UserInterface
 from user import User
 from account import Account
@@ -7,7 +7,6 @@ from auth import Auth
 
 
 def main():
-    message = Message()
     ui = UserInterface()
     auth = Auth()
     
@@ -22,7 +21,7 @@ def main():
         print("please login to continue.")
 
         user_name = input("user_name: ")
-        password = input("password")
+        password = input("password: ")
 
         user = auth.login(user_name, password)
         if not user:
