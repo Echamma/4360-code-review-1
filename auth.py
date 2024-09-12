@@ -13,8 +13,7 @@ class Auth:
             users = json.load(file)['users']
 
         for user in users:
-            if user['name'] == user_name:
-                if user['password'] == password:
+            if user['name'] == user_name and user['password'] == password:
                     accounts = {}
                     for account in user['accounts']:
                         accounts[account['account_number']] = Account(account['balance'])
