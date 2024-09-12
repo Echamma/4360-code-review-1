@@ -9,12 +9,12 @@ class Auth:
     def __init__(self):
         pass
 
-    def login(self, username, password):
+    def login(self, user_name, password):
         with open('db.json', 'r') as file:
             users = json.load(file)['users']
 
         for user in users:
-            if user['name'] == username:
+            if user['name'] == user_name:
                 if user['password'] == password:
                     accounts = {}
                     for account in user['accounts']:
