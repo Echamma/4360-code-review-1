@@ -1,5 +1,5 @@
 from message import Message
-from exceptions import BankingExcpetion, InvalidAccountNumberException
+from exceptions import BankingExcpetion, Invalidaccount_numberException
 
 
 message = Message()
@@ -18,12 +18,12 @@ class User:
     
     def deposit(self, args):
         try:
-            accountNumber = int(args[0])
+            account_number = int(args[0])
             amount = int(args[1])
-            account = self.accounts.get(accountNumber)
+            account = self.accounts.get(account_number)
             
             if not account:
-                raise InvalidAccountNumberException
+                raise Invalidaccount_numberException
 
             account.deposit(amount)
             return account.check_balance()
@@ -34,12 +34,12 @@ class User:
 
     def withdraw(self, args):
         try:
-            accountNumber = int(args[0])
+            account_number = int(args[0])
             amount = int(args[1])
-            account = self.accounts[accountNumber]
+            account = self.accounts[account_number]
 
             if not account:
-                raise InvalidAccountNumberException
+                raise Invalidaccount_numberException
 
             account.withdraw(amount)
             return account.check_balance()
@@ -58,7 +58,7 @@ class User:
         account2 = self.accounts[to_account_number]
 
         if not account1 or not account2:
-            raise InvalidAccountNumberException
+            raise Invalidaccount_numberException
 
         account1.withdraw(amount)
         account2.deposit(amount)
